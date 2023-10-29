@@ -97,8 +97,8 @@ def run():
     max_message_length = 2000 * 1024 * 1024  # 10 МБ в байтах
     channel = grpc.insecure_channel('localhost:50052', options=(('grpc.max_send_message_length', max_message_length),))
     stub = FileTransferServiceStub(channel)
-    path_l = "/Users/aroslavsapoval/myProjects/images_grpc_1980/left"
-    path_r = "/Users/aroslavsapoval/myProjects/images_grpc_1980/right"
+    path_l = "/Users/aroslavsapoval/myProjects/images_grpc_512/left"
+    path_r = "/Users/aroslavsapoval/myProjects/images_grpc_512/right"
     images = Dataloader2(path_l, path_r)
     transfer_methods = {}
     popit = 0
